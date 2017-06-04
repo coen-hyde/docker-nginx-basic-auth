@@ -48,5 +48,6 @@ nginx: [emerg] host not found in upstream "web" in /etc/nginx/conf.d/auth.conf:8
 ```
 - You need to link the container as `web` (`--link foobar:web`)
 
+
 ---
 - SSL is unsupported ATM, but might be available in the near future. For now it might be a suitable solution to use another reverse proxy (e.g. `jwilder/nginx-proxy`) that acts as a central gateway. You just need to configure the `VIRTUAL_HOST` env and disable port forwarding.
