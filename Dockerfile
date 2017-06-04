@@ -8,6 +8,7 @@ WORKDIR /opt
 
 RUN apk add --no-cache gettext
 
-COPY auth.conf auth.htpasswd launch.sh ./
+COPY auth.conf auth.htpasswd entrypoint.sh ./
 
-CMD ["./launch.sh"]
+ENTRYPOINT ["./entrypoint.sh"]
+CMD ["nginx", "-g", "daemon off;"]
